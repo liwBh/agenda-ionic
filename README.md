@@ -4,7 +4,6 @@ Por: liwBH, 2022
 ### Requerimientos Previos
 
 * *Descarga y instalar node js*
-[GitHub Pages](https://pages.github.com/)
 
 * *Instalar ionic* 
 ```
