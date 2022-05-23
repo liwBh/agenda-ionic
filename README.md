@@ -246,6 +246,24 @@ Ejecutar emulador  Android studio
 - *Paquete del proyecto: io.ionic.starter -> En el divece android -> Aca se generada la base sqlite.*
 
 
+### Imagenes de la interfaz del Proyecto
+
+##### Menu
+![Menu](https://user-images.githubusercontent.com/68663454/169888762-be2c7d6d-7ca4-448f-b6ac-5092f28257ef.png)
+
+##### Pagina de Inicio
+![Inicio](https://user-images.githubusercontent.com/68663454/169888918-e90ad637-0e4e-4fe1-8220-81ded00f4d46.png)
+
+##### Pagina de contactos
+![image](https://user-images.githubusercontent.com/68663454/169889006-001e7f35-0136-473b-9d4d-175093294404.png)
+
+##### Pagina de categorias
+![image](https://user-images.githubusercontent.com/68663454/169889197-1f2c6c1d-a494-4715-9f40-8ea837a9c036.png)
+
+##### Aciones Editar y Eliminar
+![image](https://user-images.githubusercontent.com/68663454/169889243-b817ad9e-5d0d-4b8a-9e8a-c33a9fcce70d.png)
+
+![image](https://user-images.githubusercontent.com/68663454/169889305-68aa480d-c65c-49f8-8154-1538612aa9fa.png)
 
 
 
