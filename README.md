@@ -15,8 +15,7 @@ npm install -g @ionic/cli
 npm install -g @angular/cli
 ```
 
-* *Instalar gradle*  -> EL MISMO DE ANDROID STUDIO
-[tutorial](https://nodejs.org/es/)
+* *Instalar gradle*  "EL MISMO DE ANDROID STUDIO" [Video tutorial](https://nodejs.org/es/)
 
 
 #### Configuracion de variables de entorno
@@ -32,8 +31,7 @@ C:\gradle\gradle-7.4\bin
 
 - Reiniciar pc
 
-#### habilitar scripts en consola vscode
-[tutorial](https://youtu.be/bSe2txn_NuQ)
+#### Habilitar scripts en consola vscode   [Video tutorial](https://youtu.be/bSe2txn_NuQ)
 
 * Abrir powershell como administrador 
 comando: 
@@ -57,17 +55,13 @@ npm install -g cordova
 Ionic start {nombre} --cordova
 ```
  
-* legir Framework
-Angular
+* legir Framework: Angular
 
-* Elegir Plantilla
-blank
+* Elegir Plantilla: blank
 
-* confirmar utilizar cordova 
-Y
+* confirmar utilizar cordova: Y
 
-* No crear cuenta ionic
-n
+* No crear cuenta ionic: n
 
 * Abrir ruta de proyecto
 ```
@@ -118,7 +112,7 @@ ionic generate page {nombre pagina}
 
 3. Diseñar interfaz de las paginas
 
-- [Documentacion]([https://nodejs.org/es/](https://ionicframework.com/docs))
+- [Documentacion](https://ionicframework.com/docs)
 
 - [Icons](https://ionic.io/ionicons)
 
