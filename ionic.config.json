@@ -1,7 +1,8 @@
 {
   "name": "agenda-ionic",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

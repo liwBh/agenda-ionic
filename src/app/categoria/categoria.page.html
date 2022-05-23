@@ -1,0 +1,52 @@
+
+<!-- contenido pagina de categoria App -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Categoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+
+  <ion-list class="ion-margin-top">
+    <h3 class="ion-text-center">Nueva Categoria</h3>
+
+    <ion-item>
+        <ion-label position="floating">Categoria</ion-label>
+        <ion-input [(ngModel)]="nombre_categoria" type="text" maxlength="20"> </ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="ion-margin-top ion-margin-bottom" color="success" (click)="insertarCategoria()">Guardar</ion-button>
+  </ion-list>
+
+  <ion-list class="ion-margin-top">
+    <h3 class="ion-text-center">Lista de Categorias</h3>
+
+    <ion-item-sliding *ngFor="let categoria of categorias">
+
+      <ion-item-options side="start">
+        <ion-item-option color="warning" 
+        (click)="editarCategoria( categoria.id, categoria.nombre )">
+          Editar
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item class="ion-text-center">
+        <ion-label>{{ categoria.nombre }}</ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="eliminarCategoria(categoria.id)">
+          Eliminar
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+</ion-content>
