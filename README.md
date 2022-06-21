@@ -274,12 +274,12 @@ Ejecutar emulador  Android studio
 Mensaje: By Caused: org.gradle.api.internal.plugins.PluginApplicationException: Apply to the Failed plugin [ID 'com.android.internal.application'] gradle.properties in Gradle.Scripts is
 added
 
-* solución 
+#### solución 
 ![image](![image](https://user-images.githubusercontent.com/68663454/174694649-e77f3bf7-e550-4774-bf86-89f803d1bb70.png)
 
-* Agregar en ese archivo esta linea de codigo: 
+#### Agregar en ese archivo esta linea de codigo: 
  ```
 android.overridePathCheck=true
  ```
 
-Fuente: - [Blog](https://blog.katastros.com/a?ID=01800-3b28a35d-6268-4723-baae-32bf98ec70fd)
+##### Fuente:  [Blog](https://blog.katastros.com/a?ID=01800-3b28a35d-6268-4723-baae-32bf98ec70fd)
