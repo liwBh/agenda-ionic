@@ -275,7 +275,7 @@ Mensaje: By Caused: org.gradle.api.internal.plugins.PluginApplicationException: 
 added
 
 #### solución 
-![image](![image](https://user-images.githubusercontent.com/68663454/174694649-e77f3bf7-e550-4774-bf86-89f803d1bb70.png)
+![image](https://user-images.githubusercontent.com/68663454/174694649-e77f3bf7-e550-4774-bf86-89f803d1bb70.png)
 
 #### Agregar en ese archivo esta linea de codigo: 
  ```
