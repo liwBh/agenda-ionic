@@ -20,18 +20,19 @@ npm install -g @angular/cli
 
 #### Configuracion de variables de entorno
 
-- Variables Nuevas
-ANDROID_HOME : C:\Users\liwba\.android
-ANDROID_SDK_ROOT : C:\Users\liwba\AppData\Local\Android\Sdk
-JAVA_HOME : C:\Program Files\Java\jdk1.8.0_202
+##### Variables Nuevas
+* ANDROID_HOME : C:\Users\liwba\.android
+* ANDROID_SDK_ROOT : C:\Users\liwba\AppData\Local\Android\Sdk
+* JAVA_HOME : C:\Program Files\Java\jdk1.8.0_202
 
-- Editar Path - nuevo
-C:\Users\liwba\AppData\Local\Android\Sdk\platform-tools
-C:\gradle\gradle-7.4\bin
+##### Editar Path - nuevo
+* C:\Users\liwba\AppData\Local\Android\Sdk\platform-tools
+* C:\gradle\gradle-7.4\bin
 
-- Reiniciar pc
+##### Reiniciar pc
 
-#### Habilitar scripts en consola vscode   [Video tutorial](https://youtu.be/bSe2txn_NuQ)
+#### Habilitar scripts en consola vscode   
+- [Video tutorial](https://youtu.be/bSe2txn_NuQ)
 
 * Abrir powershell como administrador 
 comando: 
@@ -266,6 +267,19 @@ Ejecutar emulador  Android studio
 ![image](https://user-images.githubusercontent.com/68663454/169889305-68aa480d-c65c-49f8-8154-1538612aa9fa.png)
 
 
+### Error 
 
+1) Al abrir el proyecto en android studio 
 
+Mensaje: By Caused: org.gradle.api.internal.plugins.PluginApplicationException: Apply to the Failed plugin [ID 'com.android.internal.application'] gradle.properties in Gradle.Scripts is
+added
 
+* solución 
+![image](![image](https://user-images.githubusercontent.com/68663454/174694649-e77f3bf7-e550-4774-bf86-89f803d1bb70.png)
+
+* Agregar en ese archivo esta linea de codigo: 
+ ```
+android.overridePathCheck=true
+ ```
+
+Fuente: - [Blog](https://blog.katastros.com/a?ID=01800-3b28a35d-6268-4723-baae-32bf98ec70fd)
