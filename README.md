@@ -283,3 +283,119 @@ android.overridePathCheck=true
  ```
 
 ##### Fuente:  [Blog](https://blog.katastros.com/a?ID=01800-3b28a35d-6268-4723-baae-32bf98ec70fd)
+
+## IONIC WEB SERVICE  
+
+##### [Tutorial Base](https://youtu.be/bqiHfIBh8Xk)
+
+#### Navegacion entre paginas, se debe agregar a cada pagina el sigueinte codigo:
+
+
+##### Nota: 
+"Sin el uso adecuado de navegacion puede no ejecutar el contructor ni ngOnInit de la pagina y no realizar la ejecucion de metodos."
+
+* inicio de pagina archivo {nombre pagina}.page.ts
+```
+import { NavController } from '@ionic/angular';
+ ```
+ 
+ * Constructor archivo {nombre pagina}.page.ts
+```
+  constructor( 
+    public apiService : ApiService,
+    public toastController: ToastController, 
+    public navCtrl: NavController
+    ) {
+
+  }
+ ```
+ 
+ * metodo archivo {nombre pagina}.page.ts
+```
+  redirecionar(){
+    this.navCtrl.navigateRoot('/{nombre pagina}');
+  }
+ ```
+ 
+  * botón archivo {nombre pagina}.page.html
+```
+  <ion-button color="success" size="small"  (click)="redirecionar()">
+    Nuevo
+  </ion-button>
+ ```
+ 
+ #### Guia del uso de Grid layout en Ionic
+ * [Tutorial](https://ionicframework.com/docs/api/grid)
+
+#### Habilitar uso de Cors 
+
+* En web service PHP: [Tutorial](https://victorroblesweb.es/2017/04/23/cabeceras-http-php-permitir-acceso-cors/)
+
+```
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+```
+
+* En Ionic proyecto: archivo creado para el servicio de api
+```
+ionic generate service api
+```
+
+```
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+```
+
+```
+  headers: HttpHeaders;
+```
+
+```
+  constructor( public http: HttpClient ) { 
+    this.headers = new HttpHeaders();
+    this.headers.append("Accept", 'application/json');
+    this.headers.append("Content-Type", 'application/json');
+    this.headers.append("Access-Control-Allow-Origin", '*');
+  }
+```
+
+* Agregar modulo http en archivo: app-module.ts
+```
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), HttpClientModule, AppRoutingModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  bootstrap: [AppComponent],
+})
+```
+
+ #### Tutorial pasar un objeto de una pagina a otra
+ 
+ ##### Nota: 
+* " No usar la navegacion que usan en el video para paginas puede dar problemas de actualizacion de datos "
+* " Utilizar el mismo archivo generado para los servicios de api "
+
+```
+import { BehaviorSubject } from 'rxjs';
+```
+
+```
+  private objectsource = new BehaviorSubject<{}>({});
+  $getObjectSource = this.objectsource.asObservable();
+   objeto: any = {};
+```
+
+```
+  sendObjectSource( vehiculo: any ){
+    this.objectsource.next( vehiculo );
+  }
+```
+
+```
+    this.apiService.$getObjectSource.subscribe( (data) => {
+      this.objeto = data;
+    });
+```
