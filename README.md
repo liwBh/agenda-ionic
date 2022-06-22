@@ -378,6 +378,7 @@ import { HttpClientModule } from '@angular/common/http';
 * " No usar la navegacion que usan en el video para paginas puede dar problemas de actualizacion de datos "
 * " Utilizar el mismo archivo generado para los servicios de api "
 
+* Archivo de api service
 ```
 import { BehaviorSubject } from 'rxjs';
 ```
@@ -385,17 +386,38 @@ import { BehaviorSubject } from 'rxjs';
 ```
   private objectsource = new BehaviorSubject<{}>({});
   $getObjectSource = this.objectsource.asObservable();
-   objeto: any = {};
+   
 ```
 
 ```
-  sendObjectSource( vehiculo: any ){
-    this.objectsource.next( vehiculo );
+  sendObjectSource( objeto: any ){
+    this.objectsource.next( objeto );
+  }
+   
+```
+
+* Archivo de que envia los datos dentro de un metodo
+```
+  editar( objeto ){
+    //enviar datos
+    this.apiService.sendObjectSource( objeto );
+
+    //redirecionar
+    this.navCtrl.navigateRoot('/{nombre pagina}');
   }
 ```
 
+
+* Archivo de que recibe los datos dentro de un metodo
 ```
+objeto: any = {};
+
+  ngOnInit() {
     this.apiService.$getObjectSource.subscribe( (data) => {
       this.objeto = data;
     });
+  }
 ```
+
+
+
