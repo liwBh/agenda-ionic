@@ -419,5 +419,36 @@ objeto: any = {};
   }
 ```
 
+### Variables de entorno que mejoran la configuracion y trabajo con el emulador tiempo real 
+
+* Agregar nuevas variables en path
+![image](https://user-images.githubusercontent.com/68663454/175204205-5ce76b18-72b7-42df-a800-18dd919e67af.png)
+
+* Nuevas variables de entorno
+![image](https://user-images.githubusercontent.com/68663454/175204361-c9e02173-104e-42b0-b5ed-1b068c80bb38.png)
 
 
+* Si todo esta bien configurado solo necesitara este comando, actualiza y muestra el codigo a tiempo real funciona tanto web como con emulador
+```
+ionic capacitor run android --livereload --external 
+```
+
+* Al ejecutarlo deberia aparecer la opcion de elegir los emuladores disponibles de Android studio, otros instalados en la pc y celular conectado
+"Con las teclas de flecha arriba o abajo seleccionan el emulador +  enter "
+
+![image](https://user-images.githubusercontent.com/68663454/175205185-0313eb19-345e-4cc9-9ff3-ef0bf6f0d1ee.png)
+
+
+##### Agilizar uso de comando 
+Archivo: package.json
+
+Añadir scripts:
+```
+ 	"emu": "ionic capacitor run android --livereload --external"
+```
+
+Ejecutar: 
+```
+	npm run emu
+  
+```
