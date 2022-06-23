@@ -421,14 +421,15 @@ objeto: any = {};
 
 ### Variables de entorno que mejoran la configuracion y trabajo con el emulador tiempo real 
 
-* Agregar nuevas variables en path
+##### Agregar nuevas variables en path
 ![image](https://user-images.githubusercontent.com/68663454/175204205-5ce76b18-72b7-42df-a800-18dd919e67af.png)
 
-* Nuevas variables de entorno
+#### Nuevas variables de entorno
 ![image](https://user-images.githubusercontent.com/68663454/175204361-c9e02173-104e-42b0-b5ed-1b068c80bb38.png)
 
 
 * Si todo esta bien configurado solo necesitara este comando, actualiza y muestra el codigo a tiempo real funciona tanto web como con emulador
+
 ```
 ionic capacitor run android --livereload --external 
 ```
