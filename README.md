@@ -372,7 +372,8 @@ import { HttpClientModule } from '@angular/common/http';
 })
 ```
 
- #### Tutorial pasar un objeto de una pagina a otra
+ #### Tutorial pasar un objeto de una pagina a otra 
+  * [Tutorial](https://youtu.be/xSTXCjmLfSg)
  
  ##### Nota: 
 * " No usar la navegacion que usan en el video para paginas puede dar problemas de actualizacion de datos "
